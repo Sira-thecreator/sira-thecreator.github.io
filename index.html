@@ -193,9 +193,10 @@
   /* Språkknapp SV / EN: handskriven, valt språk ringas in som "kod" i rubriken */
   .lang-toggle {
     font: inherit; background: none; border: none; cursor: pointer; color: var(--ink);
-    display: inline-flex; align-items: baseline; gap: 12px; padding: 0 10px 0 8px; margin-left: 4px;
+    display: inline-flex; align-items: baseline; gap: 16px; padding: 0 10px 0 8px; margin-left: 4px;
   }
-  .lang-toggle i { font-style: normal; color: var(--ink); opacity: .6; }
+  /* Snedstrecket ritas som ett handdraget streck i samma höjd som bokstäverna */
+  .lang-toggle i { display: block; font-size: 0; width: 1.6px; height: 24px; align-self: center; background: var(--ink); border-radius: 2px; transform: rotate(18deg); opacity: .75; }
   .lang-toggle span { position: relative; padding: 0 3px; color: var(--ink); }
   .lang-toggle span.active::after {
     content: ""; position: absolute; left: -6px; right: -6px; top: -1px; bottom: -3px;
