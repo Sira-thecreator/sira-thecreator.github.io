@@ -190,12 +190,20 @@
   }
 
 
-  /* Språkknapp SV / EN */
-  .lang-toggle { font: inherit; background: none; border: none; cursor: pointer; color: var(--ink); display: inline-flex; align-items: baseline; gap: 4px; padding: 0 2px; }
+  /* Språkknapp SV / EN: handskriven, valt språk ringas in som "kod" i rubriken */
+  .lang-toggle {
+    font: inherit; background: none; border: none; cursor: pointer; color: var(--ink);
+    display: inline-flex; align-items: baseline; gap: 16px; padding: 0 8px; margin-left: 6px;
+  }
   .lang-toggle i { font-style: normal; opacity: .35; }
-  .lang-toggle span { opacity: .4; transition: opacity .2s; }
-  .lang-toggle span.active { opacity: 1; font-weight: 700; background: linear-gradient(transparent 60%, #ffd84d 60% 92%, transparent 92%); }
+  .lang-toggle span { position: relative; opacity: .5; transition: opacity .2s; }
+  .lang-toggle span.active { opacity: 1; }
+  .lang-toggle span.active::after {
+    content: ""; position: absolute; inset: -2px -9px -1px -9px;
+    border: 2.5px solid var(--red); border-radius: 50%; transform: rotate(-4deg); pointer-events: none;
+  }
   .lang-toggle:hover span { opacity: 1; }
+  .lang-toggle:focus-visible { outline: 2px dashed var(--red); outline-offset: 6px; }
 
   /* Sticky note contact */
   .contact { display: flex; gap: 40px; align-items: center; justify-content: center; padding: 40px 0 100px; flex-wrap: wrap; }
@@ -301,7 +309,7 @@
           <div class="entry"><span class="when">2020 & 2024</span><strong data-en="Programming 1 (JavaScript &amp;amp; Python), Jensen Adult Education">Programmering 1 (JavaScript & Python), Jensen Komvux</strong></div>
           <div class="entry"><span class="when">2022 & 2023</span><strong data-en="Security Guard Training 1 &amp;amp; 2, BYA, Kista">Väktarutbildning 1 & 2, BYA, Kista</strong></div>
           <div class="entry"><span class="when">2017 – 2020</span><strong data-en="Technology: Civil Engineering &amp;amp; Environment, Designgymnasiet">Teknik: Samhällsbyggande & Miljö, Designgymnasiet</strong>
-            <span data-en="Specialization: Architecture &amp;amp; Design (AutoCAD)">Fördjupning: Arkitektur & Design (AutoCAD)</span></div>
+            <span data-en="Specialization: Architecture &amp;amp; Design">Fördjupning: Arkitektur & Design</span></div>
 
           <h3 style="margin-top:34px" data-en="Experience">Erfarenhet</h3>
           <div class="entry"><span class="when" data-en="Jul 2022 – present">Jul 2022 – pågår</span><strong data-en="Security Guard &amp;amp; Receptionist, Securitas AB">Väktare & Receptionist, Securitas AB</strong>
