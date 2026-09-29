@@ -189,6 +189,14 @@
     .modal-close { top: -14px; right: -8px; width: 42px; height: 42px; }
   }
 
+
+  /* Språkknapp SV / EN */
+  .lang-toggle { font: inherit; background: none; border: none; cursor: pointer; color: var(--ink); display: inline-flex; align-items: baseline; gap: 4px; padding: 0 2px; }
+  .lang-toggle i { font-style: normal; opacity: .35; }
+  .lang-toggle span { opacity: .4; transition: opacity .2s; }
+  .lang-toggle span.active { opacity: 1; font-weight: 700; background: linear-gradient(transparent 60%, #ffd84d 60% 92%, transparent 92%); }
+  .lang-toggle:hover span { opacity: 1; }
+
   /* Sticky note contact */
   .contact { display: flex; gap: 40px; align-items: center; justify-content: center; padding: 40px 0 100px; flex-wrap: wrap; }
   .sticky { width: 320px; min-height: 280px; background: #fff27a; padding: 32px 28px; transform: rotate(-3deg); box-shadow: 0 16px 30px -12px rgba(0,0,0,.35); font-family: 'Caveat'; font-size: 28px; line-height: 1.3; }
@@ -214,59 +222,59 @@
 <div class="wrap">
   <header>
     <a href="#" class="logo">Siramol Saensoem</a>
-    <nav><a href="#work">projekt</a><a href="#about">om</a><a href="#cv">cv</a><a href="#contact">kontakt</a></nav>
+    <nav><a href="#work" data-en="projects">projekt</a><a href="#about" data-en="about">om</a><a href="#cv">cv</a><a href="#contact" data-en="contact">kontakt</a><button type="button" class="lang-toggle" aria-label="Byt språk / Switch language"><span data-lang="sv">SV</span><i>/</i><span data-lang="en">EN</span></button></nav>
   </header>
 
   <section class="hero" id="about">
     <div>
-      <p class="hello">Hej! Jag heter Siramol</p>
-      <h1>Jag är <span class="marker">UX-designer</span> som rör mig mellan research, design och <span class="circle">kod</span>.</h1>
-      <p>Jag gillar att förstå hela kedjan, från användarintervjuer och behovsanalys till wireframes, prototyper i Figma och färdig kod. Eftersom jag själv kodar i HTML, CSS, JavaScript och Tailwind designar jag lösningar som går att bygga, med tillgänglighet och en smidig överlämning till utvecklare i fokus.</p>
-      <span class="note"><mark>studerar UX-design på Nackademin</mark></span>
+      <p class="hello" data-en="Hi! I&#x27;m Siramol">Hej! Jag heter Siramol</p>
+      <h1 data-en="I&#x27;m a &lt;span class=&quot;marker&quot;&gt;UX designer&lt;/span&gt; who moves between research, design and &lt;span class=&quot;circle&quot;&gt;code&lt;/span&gt;.">Jag är <span class="marker">UX-designer</span> som rör mig mellan research, design och <span class="circle">kod</span>.</h1>
+      <p data-en="I like understanding the whole chain, from user interviews and needs analysis to wireframes, prototypes in Figma and finished code. Since I code in HTML, CSS, JavaScript and Tailwind myself, I design solutions that can actually be built, with a focus on accessibility and a smooth handoff to developers.">Jag gillar att förstå hela kedjan, från användarintervjuer och behovsanalys till wireframes, prototyper i Figma och färdig kod. Eftersom jag själv kodar i HTML, CSS, JavaScript och Tailwind designar jag lösningar som går att bygga, med tillgänglighet och en smidig överlämning till utvecklare i fokus.</p>
+      <span class="note"><mark data-en="studying UX design at Nackademin">studerar UX-design på Nackademin</mark></span>
     </div>
   </section>
 
-  <h2 class="board-title" id="work">Mina UX-projekt ↓</h2>
+  <h2 class="board-title" id="work" data-en="My UX projects ↓">Mina UX-projekt ↓</h2>
   <section class="board">
     <!-- data-images: bilderna i bildspelet. Saknas en fil hoppas den bara över. -->
     <a href="#" class="card" data-images="gambling-1.png, gambling-2.png, gambling-3.png, gambling-4.png, gambling-5.png, gambling-6.png, gambling-7.png, gambling-8.png, gambling-9.png, gambling-10.png">
       <div class="pin"></div><div class="pic c1"><img class="real" src="gambling-1.png" alt="Responsible Gambling" onerror="this.remove()"></div>
-      <p class="meta">KI Innovations · Nackademin · Höst 2025</p>
+      <p class="meta" data-en="KI Innovations · Nackademin · Autumn 2025">KI Innovations · Nackademin · Höst 2025</p>
       <h3>Responsible Gambling</h3>
-      <p>Behovsanalys och intressentkarta kring spelansvar. Jag kartlade spelares behov längs hela spelresan och hittade de ögonblick där rätt insikt minskar risken mest.</p>
-      <div class="methods"><span>Intervjuer</span><span>Intressentkarta</span><span>Gap-analys</span><span>Traumamedveten research</span></div>
-      <span class="scribble">etiskt känsligt ämne</span>
+      <p data-en="Needs analysis and stakeholder map around responsible gambling. I mapped players&#x27; needs along the entire gambling journey and found the moments where the right insight reduces risk the most.">Behovsanalys och intressentkarta kring spelansvar. Jag kartlade spelares behov längs hela spelresan och hittade de ögonblick där rätt insikt minskar risken mest.</p>
+      <div class="methods"><span data-en="Interviews">Intervjuer</span><span data-en="Stakeholder mapping">Intressentkarta</span><span data-en="Gap analysis">Gap-analys</span><span data-en="Trauma-informed research">Traumamedveten research</span></div>
+      <span class="scribble" data-en="ethically sensitive topic">etiskt känsligt ämne</span>
     </a>
     <a href="#" class="card" data-images="quiz-1.png, quiz-2.png, quiz-3.png, quiz-4.png, quiz-5.png, quiz-6.png, quiz-7.png, quiz-8.png, quiz-9.png, quiz-10.png">
-      <div class="tape"></div><div class="pic c2"><img class="real" src="quiz-1.png" alt="Behovsvalidering inom quiz" onerror="this.remove()"></div>
-      <p class="meta">Flatwave AB · Nackademin UCD-kurs · Vår 2026</p>
-      <h3>Behovsvalidering inom quiz</h3>
-      <p>Strategisk research för en startup. Jag rangordnade användarnas behov för att kunna fatta ett evidensbaserat beslut om vad bolaget skulle satsa på.</p>
-      <div class="methods"><span>Netnografi</span><span>JTBD</span><span>HILS</span><span>Value Proposition</span><span>Comprehension test</span></div>
-      <span class="scribble">data före magkänsla</span>
+      <div class="tape"></div><div class="pic c2"><img class="real" src="quiz-1.png" alt="Behovsvalidering inom quiz" data-en-alt="Needs validation for quizzes" onerror="this.remove()"></div>
+      <p class="meta" data-en="Flatwave AB · Nackademin UCD course · Spring 2026">Flatwave AB · Nackademin UCD-kurs · Vår 2026</p>
+      <h3 data-en="Needs validation for quizzes">Behovsvalidering inom quiz</h3>
+      <p data-en="Strategic research for a startup. I ranked user needs so the company could make an evidence-based decision about what to invest in.">Strategisk research för en startup. Jag rangordnade användarnas behov för att kunna fatta ett evidensbaserat beslut om vad bolaget skulle satsa på.</p>
+      <div class="methods"><span data-en="Netnography">Netnografi</span><span>JTBD</span><span>HILS</span><span>Value Proposition</span><span>Comprehension test</span></div>
+      <span class="scribble" data-en="data over gut feeling">data före magkänsla</span>
     </a>
     <a href="#" class="card" data-images="kvickbite.png, kvickbite-2.png, kvickbite-3.png, kvickbite-4.png, kvickbite-5.png, kvickbite-6.png, kvickbite-7.png, kvickbite-8.png, kvickbite-9.png, kvickbite-10.png">
       <div class="pin"></div>
-      <div class="pic shot"><img src="kvickbite.png" alt="KvickBite, startvyn i tabletversion med receptpaket och populära varor"></div>
-      <p class="meta">Nackademin UI-kurs · Vår 2026</p>
-      <h3>KvickBite – express-app för matvaror</h3>
-      <p>High-fidelity-design från wireframes till MVP-redo mockups. Fem vyer för mobil och tablet, plus ett mini-designsystem för smidig överlämning till utvecklare.</p>
-      <div class="methods"><span>Figma</span><span>Designsystem</span><span>Mobile-first</span><span>UI-principer</span></div>
-      <span class="scribble">affärsmål i fokus</span>
+      <div class="pic shot"><img src="kvickbite.png" alt="KvickBite, startvyn i tabletversion med receptpaket och populära varor" data-en-alt="KvickBite, tablet home screen with recipe bundles and popular products"></div>
+      <p class="meta" data-en="Nackademin UI course · Spring 2026">Nackademin UI-kurs · Vår 2026</p>
+      <h3 data-en="KvickBite – express grocery app">KvickBite – express-app för matvaror</h3>
+      <p data-en="High-fidelity design from wireframes to MVP-ready mockups. Five views for mobile and tablet, plus a mini design system for a smooth handoff to developers.">High-fidelity-design från wireframes till MVP-redo mockups. Fem vyer för mobil och tablet, plus ett mini-designsystem för smidig överlämning till utvecklare.</p>
+      <div class="methods"><span>Figma</span><span data-en="Design systems">Designsystem</span><span>Mobile-first</span><span data-en="UI principles">UI-principer</span></div>
+      <span class="scribble" data-en="business goals in focus">affärsmål i fokus</span>
     </a>
     <a href="#" class="card" data-images="viking-museum.png, viking-museum-2.png, viking-museum-3.png, viking-museum-4.png, viking-museum-5.png, viking-museum-6.png, viking-museum-7.png, viking-museum-8.png, viking-museum-9.png, viking-museum-10.png">
-      <div class="tape"></div><div class="pic c4"><span class="qr"></span><img class="real" src="viking-museum.png" alt="The Viking Museum, appens quizvy" onerror="this.remove()"></div>
-      <p class="meta">Vikingamuseet · Nackademin kursuppdrag</p>
+      <div class="tape"></div><div class="pic c4"><span class="qr"></span><img class="real" src="viking-museum.png" alt="The Viking Museum, appens quizvy" data-en-alt="The Viking Museum, the app&#x27;s quiz view" onerror="this.remove()"></div>
+      <p class="meta" data-en="The Viking Museum · Nackademin course assignment">Vikingamuseet · Nackademin kursuppdrag</p>
       <h3>The Viking Museum</h3>
-      <p>En gamifierad besöksapp där man skannar QR-koder vid varje monter, bygger sin egen vikingavatar och svarar på quizfrågor om vikingatiden. Rätt svar ger poäng som kan lösas in mot belöningar, som rabatt i museishopen eller gratis fika.</p>
-      <div class="methods"><span>Gamification</span><span>Användarresa</span><span>Tillgänglighet</span><span>Konkurrensanalys</span><span>Interaktionsdesign</span><span>Prototyping</span></div>
-      <span class="scribble">lär dig & samla poäng!</span>
+      <p data-en="A gamified visitor app where you scan QR codes at each exhibit, build your own Viking avatar and answer quiz questions about the Viking Age. Correct answers earn points that can be redeemed for rewards, like a discount in the museum shop or a free coffee.">En gamifierad besöksapp där man skannar QR-koder vid varje monter, bygger sin egen vikingavatar och svarar på quizfrågor om vikingatiden. Rätt svar ger poäng som kan lösas in mot belöningar, som rabatt i museishopen eller gratis fika.</p>
+      <div class="methods"><span>Gamification</span><span data-en="User journey">Användarresa</span><span data-en="Accessibility">Tillgänglighet</span><span data-en="Competitive analysis">Konkurrensanalys</span><span data-en="Interaction design">Interaktionsdesign</span><span>Prototyping</span></div>
+      <span class="scribble" data-en="learn &amp;amp; collect points!">lär dig & samla poäng!</span>
     </a>
   </section>
 
   <section class="cv" id="cv">
     <div class="cv-head">
-      <h2>Mitt CV ✎</h2>
+      <h2 data-en="My CV ✎">Mitt CV ✎</h2>
     </div>
 
     <div class="sheet">
@@ -276,63 +284,63 @@
       <div class="cv-top">
         <div>
           <h3 class="name">Siramol Saensoem</h3>
-          <span class="role">UX-designer</span>
-          <p class="profile">UX-designer under utbildning som tycker om att förstå hela pipelinen, inte bara min egen del av den. Jag kombinerar användarresearch och interaktionsdesign med kodkunskaper och en bakgrund inom arkitektur.</p>
+          <span class="role" data-en="UX designer">UX-designer</span>
+          <p class="profile" data-en="UX designer in training who enjoys understanding the whole pipeline, not just my own part of it. I combine user research and interaction design with coding skills and a background in architecture.">UX-designer under utbildning som tycker om att förstå hela pipelinen, inte bara min egen del av den. Jag kombinerar användarresearch och interaktionsdesign med kodkunskaper och en bakgrund inom arkitektur.</p>
         </div>
         <ul class="contact-list">
-          <li><b>Plats</b> Stockholm</li>
-          <li><b>E-post</b> <a href="mailto:siramol.saensoem@yh.nackademin.se">siramol.saensoem@yh.nackademin.se</a></li>
+          <li data-en="&lt;b&gt;Location&lt;/b&gt; Stockholm"><b>Plats</b> Stockholm</li>
+          <li data-en="&lt;b&gt;Email&lt;/b&gt; &lt;a href=&quot;mailto:siramol.saensoem@yh.nackademin.se&quot;&gt;siramol.saensoem@yh.nackademin.se&lt;/a&gt;"><b>E-post</b> <a href="mailto:siramol.saensoem@yh.nackademin.se">siramol.saensoem@yh.nackademin.se</a></li>
         </ul>
       </div>
 
       <div class="cv-grid">
         <div>
-          <h3>Utbildning</h3>
-          <div class="entry"><span class="when">Aug 2025 – pågår</span><strong>UX-designer, Nackademin, Solna</strong>
-            <span>UI-design, interaktionsdesign och prototyper, informationsarkitektur och innehållsstrategi, tillgänglighet, UX och agila metoder, programmering</span></div>
-          <div class="entry"><span class="when">2020 & 2024</span><strong>Programmering 1 (JavaScript & Python), Jensen Komvux</strong></div>
-          <div class="entry"><span class="when">2022 & 2023</span><strong>Väktarutbildning 1 & 2, BYA, Kista</strong></div>
-          <div class="entry"><span class="when">2017 – 2020</span><strong>Teknik: Samhällsbyggande & Miljö, Designgymnasiet</strong>
-            <span>Fördjupning: Arkitektur & Design (AutoCAD)</span></div>
+          <h3 data-en="Education">Utbildning</h3>
+          <div class="entry"><span class="when" data-en="Aug 2025 – present">Aug 2025 – pågår</span><strong data-en="UX Designer, Nackademin, Solna">UX-designer, Nackademin, Solna</strong>
+            <span data-en="UI design, interaction design and prototyping, information architecture and content strategy, accessibility, UX and agile methods, programming">UI-design, interaktionsdesign och prototyper, informationsarkitektur och innehållsstrategi, tillgänglighet, UX och agila metoder, programmering</span></div>
+          <div class="entry"><span class="when">2020 & 2024</span><strong data-en="Programming 1 (JavaScript &amp;amp; Python), Jensen Adult Education">Programmering 1 (JavaScript & Python), Jensen Komvux</strong></div>
+          <div class="entry"><span class="when">2022 & 2023</span><strong data-en="Security Guard Training 1 &amp;amp; 2, BYA, Kista">Väktarutbildning 1 & 2, BYA, Kista</strong></div>
+          <div class="entry"><span class="when">2017 – 2020</span><strong data-en="Technology: Civil Engineering &amp;amp; Environment, Designgymnasiet">Teknik: Samhällsbyggande & Miljö, Designgymnasiet</strong>
+            <span data-en="Specialization: Architecture &amp;amp; Design (AutoCAD)">Fördjupning: Arkitektur & Design (AutoCAD)</span></div>
 
-          <h3 style="margin-top:34px">Erfarenhet</h3>
-          <div class="entry"><span class="when">Jul 2022 – pågår</span><strong>Väktare & Receptionist, Securitas AB</strong>
+          <h3 style="margin-top:34px" data-en="Experience">Erfarenhet</h3>
+          <div class="entry"><span class="when" data-en="Jul 2022 – present">Jul 2022 – pågår</span><strong data-en="Security Guard &amp;amp; Receptionist, Securitas AB">Väktare & Receptionist, Securitas AB</strong>
             <ul>
-              <li>Möter dagligen användare i okända miljöer och ser var de fastnar, vilket är direkt överförbart till att tänka kring användarflöden</li>
-              <li>Anpassar kommunikationen snabbt efter personens behov, språk och stressnivå</li>
-              <li>Hanterar flera ärenden samtidigt i högt tempo, med fokus på tydlighet, service och säkerhet</li>
+              <li data-en="Meet users in unfamiliar environments every day and see where they get stuck, which translates directly into thinking about user flows">Möter dagligen användare i okända miljöer och ser var de fastnar, vilket är direkt överförbart till att tänka kring användarflöden</li>
+              <li data-en="Quickly adapt my communication to each person&#x27;s needs, language and stress level">Anpassar kommunikationen snabbt efter personens behov, språk och stressnivå</li>
+              <li data-en="Handle several tasks at once at a fast pace, with a focus on clarity, service and security">Hanterar flera ärenden samtidigt i högt tempo, med fokus på tydlighet, service och säkerhet</li>
             </ul></div>
         </div>
 
         <div class="cv-side">
           <div>
-            <h3>Färdigheter</h3>
-            <h4>UX research & strategi</h4>
-            <div class="skills"><span>UCD</span><span>Användarintervjuer</span><span>Netnografi</span><span>Jobs-to-be-Done</span><span>Intressentkarta</span><span>Gap-analys</span><span>Konkurrensanalys</span><span>Value Proposition</span></div>
+            <h3 data-en="Skills">Färdigheter</h3>
+            <h4 data-en="UX research &amp;amp; strategy">UX research & strategi</h4>
+            <div class="skills"><span>UCD</span><span data-en="User interviews">Användarintervjuer</span><span data-en="Netnography">Netnografi</span><span>Jobs-to-be-Done</span><span data-en="Stakeholder mapping">Intressentkarta</span><span data-en="Gap analysis">Gap-analys</span><span data-en="Competitive analysis">Konkurrensanalys</span><span>Value Proposition</span></div>
           </div>
           <div>
-            <h4>UX & UI-design</h4>
-            <div class="skills"><span>Personas & user journeys</span><span>Användarflöden</span><span>Wireframing & prototyping</span><span>UI-design</span><span>Informationsarkitektur</span><span>Designsystem</span><span>Gamification</span><span>WCAG</span></div>
+            <h4 data-en="UX &amp;amp; UI design">UX & UI-design</h4>
+            <div class="skills"><span>Personas & user journeys</span><span data-en="User flows">Användarflöden</span><span>Wireframing & prototyping</span><span data-en="UI design">UI-design</span><span data-en="Information architecture">Informationsarkitektur</span><span data-en="Design systems">Designsystem</span><span>Gamification</span><span>WCAG</span></div>
           </div>
           <div>
-            <h4>Test & utvärdering</h4>
-            <div class="skills"><span>Usability testing</span><span>Heuristisk utvärdering</span><span>Comprehension testing</span><span>HILS-bedömning</span></div>
+            <h4 data-en="Testing &amp;amp; evaluation">Test & utvärdering</h4>
+            <div class="skills"><span>Usability testing</span><span data-en="Heuristic evaluation">Heuristisk utvärdering</span><span>Comprehension testing</span><span data-en="HILS assessment">HILS-bedömning</span></div>
           </div>
           <div>
-            <h4>Samarbete</h4>
-            <div class="skills"><span>Agila arbetssätt (Scrum)</span><span>Överlämning till utvecklare</span><span>Presentera för intressenter</span></div>
+            <h4 data-en="Collaboration">Samarbete</h4>
+            <div class="skills"><span data-en="Agile ways of working (Scrum)">Agila arbetssätt (Scrum)</span><span data-en="Developer handoff">Överlämning till utvecklare</span><span data-en="Presenting to stakeholders">Presentera för intressenter</span></div>
           </div>
           <div>
-            <h4>AI i designprocessen</h4>
-            <div class="skills"><span>AI-assisterad prototyping</span><span>Iterativ design med AI</span><span>AI-assisterad klustring</span><span>Kritisk validering av AI-output</span></div>
+            <h4 data-en="AI in the design process">AI i designprocessen</h4>
+            <div class="skills"><span data-en="AI-assisted prototyping">AI-assisterad prototyping</span><span data-en="Iterative design with AI">Iterativ design med AI</span><span data-en="AI-assisted clustering">AI-assisterad klustring</span><span data-en="Critical validation of AI output">Kritisk validering av AI-output</span></div>
           </div>
           <div>
-            <h4>Verktyg & kod</h4>
+            <h4 data-en="Tools &amp;amp; code">Verktyg & kod</h4>
             <div class="skills"><span>Figma</span><span>Photoshop</span><span>Illustrator</span><span>AutoCAD</span><span>VS Code</span><span>Git & GitHub</span><span>HTML & CSS</span><span>Tailwind</span><span>JavaScript</span><span>Python</span></div>
           </div>
           <div>
-            <h3>Språk</h3>
-            <ul class="plain"><li>Svenska – flytande</li><li>Engelska – flytande</li><li>Thailändska – flytande</li></ul>
+            <h3 data-en="Languages">Språk</h3>
+            <ul class="plain"><li data-en="Swedish – fluent">Svenska – flytande</li><li data-en="English – fluent">Engelska – flytande</li><li data-en="Thai – fluent">Thailändska – flytande</li></ul>
           </div>
         </div>
       </div>
@@ -340,18 +348,18 @@
   </section>
 
   <section class="contact" id="contact">
-    <div class="sticky">Vill du jobba ihop?<br><br>Skriv till mig:<br><a href="mailto:siramol.saensoem@yh.nackademin.se">siramol.saensoem@<wbr>yh.nackademin.se</a></div>
-    <div class="sticky b">Hitta mig här:<br><br>→ <a href="https://www.linkedin.com/in/siramol-saensoem-5b3683326" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div class="sticky" data-en="Want to work together?&lt;br&gt;&lt;br&gt;Write to me:&lt;br&gt;&lt;a href=&quot;mailto:siramol.saensoem@yh.nackademin.se&quot;&gt;siramol.saensoem@&lt;wbr&gt;yh.nackademin.se&lt;/a&gt;">Vill du jobba ihop?<br><br>Skriv till mig:<br><a href="mailto:siramol.saensoem@yh.nackademin.se">siramol.saensoem@<wbr>yh.nackademin.se</a></div>
+    <div class="sticky b" data-en="Find me here:&lt;br&gt;&lt;br&gt;→ &lt;a href=&quot;https://www.linkedin.com/in/siramol-saensoem-5b3683326&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;LinkedIn&lt;/a&gt;">Hitta mig här:<br><br>→ <a href="https://www.linkedin.com/in/siramol-saensoem-5b3683326" target="_blank" rel="noopener">LinkedIn</a></div>
   </section>
 
   <footer>© 2026 Siramol Saensoem</footer>
 </div>
 
 <!-- Popup för cases -->
-<dialog class="case-modal" id="caseModal" aria-label="Projekt">
+<dialog class="case-modal" id="caseModal" aria-label="Projekt" data-en-aria="Project">
   <div class="modal-wrap">
     <div class="tape"></div>
-    <button class="modal-close" aria-label="Stäng">×</button>
+    <button class="modal-close" aria-label="Stäng" data-en-aria="Close">×</button>
     <div class="modal-card"><div class="modal-body"></div></div>
   </div>
 </dialog>
@@ -394,9 +402,9 @@
     slider.className = 'slider';
     slider.innerHTML = `
       <span class="counter"></span>
-      <button class="arrow prev" aria-label="Föregående bild">←</button>
+      <button class="arrow prev" aria-label="${T().prev}">←</button>
       <div class="slides"></div>
-      <button class="arrow next" aria-label="Nästa bild">→</button>
+      <button class="arrow next" aria-label="${T().next}">→</button>
       <div class="dots"></div>`;
     const track = slider.querySelector('.slides');
     const dots = slider.querySelector('.dots');
@@ -423,7 +431,7 @@
       s.className = 'slide';
       const img = document.createElement('img');
       img.src = file;
-      img.alt = `${title}, bild ${i + 1}`;
+      img.alt = `${title}, ${T().image} ${i + 1}`;
       img.onerror = () => { s.remove(); update(); fallback(); };
       s.appendChild(img);
       track.appendChild(s);
@@ -444,7 +452,7 @@
         dots.innerHTML = '';
         for (let d = 0; d < total; d++) {
           const b = document.createElement('button');
-          b.setAttribute('aria-label', `Visa bild ${d + 1}`);
+          b.setAttribute('aria-label', `${T().show} ${d + 1}`);
           b.addEventListener('click', () => goTo(d));
           dots.appendChild(b);
         }
@@ -474,6 +482,42 @@
   modal.querySelector('.modal-close').addEventListener('click', () => modal.close());
   modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
   modal.addEventListener('close', () => document.body.classList.remove('no-scroll'));
+
+  // ===== Språk: svenska / engelska =====
+  const UI = {
+    sv: { prev: 'Föregående bild', next: 'Nästa bild', image: 'bild', show: 'Visa bild', title: 'Siramol Saensoem – UX-designer' },
+    en: { prev: 'Previous image', next: 'Next image', image: 'image', show: 'Show image', title: 'Siramol Saensoem – UX designer' }
+  };
+  let lang = 'sv';
+  function T() { return UI[lang]; }
+
+  // Spara den svenska texten första gången, så att vi kan byta tillbaka
+  document.querySelectorAll('[data-en]').forEach(el => { el.dataset.sv = el.innerHTML; });
+  document.querySelectorAll('[data-en-alt]').forEach(el => { el.dataset.svAlt = el.alt; });
+  document.querySelectorAll('[data-en-aria]').forEach(el => { el.dataset.svAria = el.getAttribute('aria-label'); });
+
+  function setLang(next) {
+    lang = next === 'en' ? 'en' : 'sv';
+    const en = lang === 'en';
+    document.documentElement.lang = lang;
+    document.title = T().title;
+    document.querySelectorAll('[data-en]').forEach(el => { el.innerHTML = en ? el.dataset.en : el.dataset.sv; });
+    document.querySelectorAll('[data-en-alt]').forEach(el => { el.alt = en ? el.dataset.enAlt : el.dataset.svAlt; });
+    document.querySelectorAll('[data-en-aria]').forEach(el => { el.setAttribute('aria-label', en ? el.dataset.enAria : el.dataset.svAria); });
+    document.querySelectorAll('.lang-toggle span').forEach(s => s.classList.toggle('active', s.dataset.lang === lang));
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  document.querySelector('.lang-toggle').addEventListener('click', () => setLang(lang === 'sv' ? 'en' : 'sv'));
+
+  // Startspråk: ?lang=en i adressen, annars senaste valet, annars webbläsarens språk
+  (function () {
+    const fromUrl = new URLSearchParams(location.search).get('lang');
+    let saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    const browser = (navigator.language || 'sv').toLowerCase().startsWith('sv') ? 'sv' : 'en';
+    setLang(fromUrl || saved || browser);
+  })();
 </script>
 </body>
 </html>
